@@ -1,0 +1,168 @@
+
+.contact-up{
+    background-color: #030830;
+    width: 100%;
+    height: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.contact-up h1{
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    text-transform: uppercase;
+    position: relative;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+    from { -webkit-mask-position: 150%; }
+    to { -webkit-mask-position: -50%; }
+  }
+.contact-us{
+    margin-bottom: 20px;
+}
+.container-left {
+    position:relative;
+    background-color: #1F3645;
+    border-radius: 50px;
+    padding: 60px;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 500px;
+    height: 580px;
+}
+.container-left h1{
+    color: #fff;
+    text-align: left;
+}
+.container-left h1 span{
+    color: #82B74B;
+}
+.container-left .contact-info{
+    padding-top: 40px;
+    position: relative;
+    left: -10px;
+
+}
+.container-left .contact-info p{
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+}
+.container-left .contact-info i{
+    font-size: 20px;
+    color: #82B74B;
+}
+.container-left .social-btn{
+    position: relative;
+    padding: 50px 0;
+    font-size: 30px;
+    text-align: center;
+    
+}
+.container-left .social-btn i{
+    color: #fff;
+    padding: 10px;
+    width: 60px;
+    margin: 5px;
+    border-radius: 10px;    
+  
+}
+.container-left .social-btn i:hover{
+    color: #82B74B;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 20px #82B74B, /* Neon glow effect */
+                0 0 40px #82B74B, 
+                0 0 60px #82B74B, 
+                0 0 80px #82B74B; 
+
+}
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container-right{
+    position: relative;
+    right: 45px;
+    background-color: #82B74B;
+    border-radius: 50px;
+    width: 400px;
+    height: 450px;
+}
+.container-right form{
+    padding: 20px;
+}
+.container-right form .input-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 30px;
+}
+.container-right .input-box input{
+    height: 40px;
+}
+
+.container-right .input-box input[type="text"]{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-inline:10px ;
+    background: transparent;
+    }
+.container-right .input-box textarea{
+    border: 2px solid #fff;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding-inline:10px ;
+    padding-top: 5px;
+    color: #fff;
+    resize: none
+
+}
+
+.container-right .input-box input[type="submit"]{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #1F3645;
+    color: #fff;
+    cursor: pointer;
+
+}
+.container-right .input-box input[type="submit"]:hover{
+    background-color: #000;
+
+}
+.container-right .input-box input:focus,
+.container-right .input-box textarea:focus{
+        border-color: #000;
+      }
+
+.container-right .input-box label{
+    position: absolute;
+    top: 2px;
+    font-size: 16px;
+    transition: .2s ease-in-out;
+    color: #fff;
+  }
+  .container-right .input-box input:focus ~ label,
+  .container-right .input-box input:valid ~ label{
+    top: -15px;
+    font-size: 14px;
+    color: #000;
+}
+.input-box textarea::placeholder{
+    color: #fff;
+}

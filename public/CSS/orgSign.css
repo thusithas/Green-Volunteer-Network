@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+   
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/Images/nature 5.jpg'); 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-container{
+    display: flex;
+    width: 900px;
+    height: 650px;
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+
+}
+/* Right side */
+.form-container .right-side{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    width: 50%;
+    background:rgba(255,255,255,0.13);
+    backdrop-filter: blur(5px);
+    border-radius:0 27px 27px 0 ;
+}
+
+.right-side form .input-box{
+    display: flex;
+    flex-direction: column;
+    margin:10x 20px 10px 20px;    
+}
+.right-side h2{
+    color: #fff;
+}
+.right-side form .row-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-side form .input-box input{
+    position: relative;
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 25px;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 16px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); 
+
+}
+
+.con-password{
+    position: relative;
+    bottom: 15px;
+}
+
+#eye, #eye2{
+    position: relative;
+    cursor: pointer;
+    color:transparent;
+    bottom: 27px;
+    left:320px;
+    width: 10px;
+  }
+  .right-side .input-box input:focus ~ #eye,
+  .right-side .input-box input:valid ~ #eye,
+  .right-side .input-box input:focus ~ #eye2,
+  .right-side .input-box input:valid ~ #eye2{
+    color: #ccc;
+  }
+  .right-side form .input-box input:focus{
+    outline:2px solid #fff;
+}
+.right-side form label{
+    position: absolute;
+    color: #fff;
+    letter-spacing:1px;
+    transition: .2s ease-in-out;
+
+}
+.right-side .input-box input:focus ~ label,
+.right-side .input-box input:valid ~ label{
+  color: #000;
+  font-weight: bold;
+}
+
+.right-side form .remember-me,
+.right-side form .agree-terms{
+    position: relative;
+    bottom: 25px;
+}
+
+.right-side form .agree-terms a{
+    color: #000;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+.right-side form .agree-terms a:hover{
+    color: #fff;
+    }
+.right-side form .input-box button{
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.right-side form .input-box button:hover{
+    background-color: #000;
+    color: #82B74B;
+}
+.or-login p{
+    text-align: center;
+    color: #fff;
+}
+.right-side .social-btn {
+    text-align: center;
+}
+.right-side .social-btn i{
+    font-size: 30px;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    width: 30px;
+    border-radius:10px;
+    margin: 5px;
+}
+.right-side .social-btn i:hover{
+    background-color: #000;
+    color: #82B74B;
+    box-shadow: 0 0 20px #82B74B,
+                0 0 40px #82B74B, 
+                0 0 60px #ffffff; 
+    transition: 0.3s ease-in-out;
+
+}
+.right-side .sign-up-link p{
+    color: #fff;
+    margin-bottom: 25px;
+}
+.right-side .sign-up-link a{
+ text-decoration: none;
+ color: #fff;
+}
+.right-side .sign-up-link a:hover{
+    color: #000;
+}
+/* Left side  */
+
+.form-container .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #fff; 
+    border-radius: 27px 0 0 27px;
+}
+
+.left-side .logo img {
+    width: 150px;
+    position: relative;
+    top: 40px; 
+}
+
+.left-side h2 {
+    color: #000; 
+    text-align: center;
+}
+
+.left-side h2 span {
+    color: #82B74B; 
+}
+
+.left-side .paragraph p {
+    text-align: center;
+    color: #000; 
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    bottom: 20px;
+}
+
+.left-side .image1 img {
+    width: 400px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+
+

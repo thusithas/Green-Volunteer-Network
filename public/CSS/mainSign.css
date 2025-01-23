@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+/* body{
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('/Images/clean 1.jpg');
+    background-size: cover;
+    
+} */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('/Images/clean 1.jpg');
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+    
+}
+nav a img{
+    width: 90px;
+    margin-left: 50px;
+}
+nav{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+nav ul li a:hover {
+    color: #82B74B;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 28px;
+    background-color: #82B74B;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.2s ease-in-out;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: #82B74B;
+    transition: width 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    transform: scaleX(1);
+    transform-origin: left; 
+}
+
+.page-content {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.page-content h1{
+    color: #fff;
+}
+
+.page-content .buttons button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border: 2px solid #82B74B;
+    border-radius: 50px;
+    font-weight: bold;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-content .buttons span {
+    background: #82B74B;
+    height: 100%;
+    width: 0;
+    border-radius: 50px;
+    position: absolute;
+    left: 50%; /* Start from the center */
+    bottom: 0;
+    transform: translateX(-50%); /* Move it to the left to align with center */
+    z-index: -1;
+    transition:0.5s ease-out;
+}
+
+.buttons button:hover span {
+    width: 200%; /* Expand the width to both sides */
+    transform: translateX(-50%); /* Maintain centered position */
+}
+.buttons button:hover{
+    border:none;
+}

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 160px;
+    width: 100%;
+    z-index: 100;
+}
+.header-up{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #030830;
+}
+.up-items{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.header-up a,
+.header-up img{
+    position: relative;
+    width: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Search bar */
+.header-up .searchBar {
+    position: absolute;
+    display: flex;
+    right: 20px;
+}
+
+.searchBar input{
+    border: 2px solid #82B74B;
+    border-radius: 50px;
+    background-color: transparent;
+    width: 350px;
+    height: 35px;
+    padding: 10px;
+    color: #82B74B;
+    outline: none;
+}
+.searchBar input:focus{
+    border: 2px solid transparent;
+    background-color: #ffffff;
+}
+.searchBar button{
+    position: relative;
+    right: 35px;
+    background-color: #82B74B;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: none;
+    width: 45px;
+    cursor: pointer;
+}
+.searchBar i{
+    color: #ffffff;
+    font-size: 15px;
+}
+
+
+
+.header-down{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.nav-links li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 14px 30px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+.nav-links li a:hover{
+    color: #82B74B;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #82B74B;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.2s ease-in-out;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Join button */
+.header-down .join-btn{
+    position: relative;
+    left: 5px;
+    list-style: none;
+    padding: 12px 40px;  
+    background-color: #030830;
+    color: #82B74B;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+       
+}
+
+.dropdown-btn-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    width: 250px;
+    background-color: #82B74B;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-btn-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-btn-content a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.2s ease-in-out;
+
+}
+
+.dropdown:hover .dropdown-btn-content {
+    display: block;
+}
+
+/* Nav animation */
+.nav-links li::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 40px;
+  left: 0;
+  background: #82B74B;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.nav-links li:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+.active   {
+    background-color: #82B74B;
+    border-radius: 5px;
+
+}
+.active:hover{
+    color: #fff;
+}
+.content{
+    position:relative;
+    margin: 7px 0 0 ;
+}
+/* Responsive styling */
+@media (max-width: 768px) {
+    .up-items {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-up a,
+    .header-up img {
+        margin: 10px 0;
+    }
+
+    .searchBar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .searchBar input {
+        width: 80%;
+    }
+
+    .header-down {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .join-btn {
+        width: 80%;
+        margin: 10px 0;
+    }
+}

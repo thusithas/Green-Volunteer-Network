@@ -1,0 +1,372 @@
+
+
+.donation {
+    position: relative;
+}
+
+.donation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/Images/nature 3.jpg'); 
+    background-size: cover;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.donation-up{
+    background-color: #030830;
+    width: 100%;
+    height: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.donation-up h1{
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    text-transform: uppercase;
+    position: relative;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+    from { -webkit-mask-position: 150%; }
+    to { -webkit-mask-position: -50%; }
+  }
+.don-container{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 20px;
+    color: #fff;
+    transform-style: preserve-3d;
+
+}
+.donation-form{
+    border-radius: 15px;
+    border: 2px solid rgba(255,255,255,0.5);
+    background:rgba(255,255,255,0.15);
+    margin: 20px 0;
+    height: 580px;
+    width: 500px;
+    backdrop-filter: blur(20px);
+    transition: transform 0.5s ease;
+}
+
+.donation-form .section1 h3,
+.donation-form .container2 h3{
+    text-align: center;
+    background-color: #82B74B;
+    padding: 5px 0;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.donation-form .container2 h3{
+    width: 99.5%;
+    position: relative;
+    left: 3px;
+}
+.donation-form .section2 h3{
+    text-align: center;
+    background-color: #82B74B;
+    padding: 5px 0;
+    color: #fff;
+  
+}
+
+.don-container .section1 .input-box,
+.don-container .section3 .input-box{
+    position: relative;
+    padding:0 40px;
+    margin-top: 30px;
+}
+.don-container .input-row {
+    display: flex;
+    justify-content: center;
+}
+.don-container .input-row input[type="text"]{
+    width: 170px;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-bottom: #82B74B 2px solid;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+
+}
+
+.donation-form .input-box input[type="email"]{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    border: none;
+    border-bottom: #82B74B 2px solid;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    left: 40px;
+    color: #fff; 
+    font-size: 16px; 
+    transition: 0.2s ease-in;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -13px; 
+    font-size: 14px; 
+    color: #82B74B; 
+}
+
+.don-container .section2 .frequency,
+.don-container .section2 .don-amount{
+    padding: 0 40px;
+}
+
+.section2 .frequency,
+.container2 .pay-meth{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.donation-form input[type="radio"]{
+    display: none;
+}
+.frequency .frq1,
+.frequency .frq2,
+.container2 .pay-meth .pay-meth1,
+.container2 .pay-meth .pay-meth2{
+    background-color: transparent;
+    border: 2px solid #82B74B;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.frequency .frq1,
+.container2 .pay-meth .pay-meth1{
+    border-right: 1px solid #82B74B;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.frequency .frq2,
+.container2 .pay-meth .pay-meth2{
+    border-left: 1px solid #82B74B;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.section2 .frequency label,
+.container2 .pay-meth label{
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  0.3s ease;
+    cursor: pointer;
+}
+.section2 .frequency label:hover,
+.container2 .pay-meth label:hover{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+}
+.frequency .frq1 label:hover,
+.pay-meth .pay-meth1 label:hover{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+
+}
+.frequency .frq2 label:hover,
+.pay-meth .pay-meth2 label:hover{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+
+}
+.section2 .frequency .frq1 input[type="radio"]:checked + label,
+.pay-meth .pay-meth1 input[type="radio"]:checked + label{
+    background-color: #82B74B;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+} 
+.section2 .frequency .frq2 input[type="radio"]:checked + label,
+.pay-meth .pay-meth2 input[type="radio"]:checked + label{
+    background-color: #82B74B;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.don-container .don-amount{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.don-container .don-amount .amount-btn{
+    height: 40px;
+    width: 120px;
+}
+.don-amount .amount-btn input[type="radio"]{
+    display: none;
+}
+.don-amount .amount-btn label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 40px;
+    border: 2px solid #82B74B;
+    border-radius: 10px;
+    transition:  0.3s ease;
+
+}
+.don-amount .amount-btn label:hover{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+}
+.don-amount .amount-btn input[type="radio"]:checked + label{
+    background-color: #82B74B;
+    color: #fff;
+    border-radius: 10px;
+}
+.section2 .input-box input[type="number"],
+.container2 .input-box input[type="email"] {
+    width: 100%;
+    height: 40px;
+    padding: 0 30px;
+    border:2px solid #82B74B;
+    border-radius: 10px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    outline: none;  
+    color: #fff;
+}
+.section2 .input-box input[type="number"]::placeholder,
+.container2 .input-box input[type="email"]::placeholder {
+    color: #000;
+  }
+ 
+.section2 .input-box{
+    padding: 0 40px;
+}
+.section2 .input-box i{
+    position: relative;
+    bottom:35px;
+    left: 10px;
+}
+.donation-form .container1 .payment-meth,
+.container2 .donate-btn{
+    display: flex;
+    justify-content: end;
+    padding: 0 40px;
+
+}
+.container2 .donate-btn{
+    margin-top: 20px;
+}
+.container1 .payment-meth button,
+.container2 .donate-btn button{
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #82B74B;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    transition:  0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.container1 .payment-meth button:hover,
+.container2 .donate-btn button:hover{
+    background-color: #82B74B;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.container2{
+    position: absolute;
+    top: 0;
+    height: 400px;
+    display: none;
+    
+}
+
+
+.container2 .payment-icons{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+   margin-top: 30px;
+}
+.container2 .payment-icons img{
+    width: 90px;
+    position: relative;
+    right: 4px;
+     
+}
+
+.container2 .don-description{
+    font-size: 14px;
+    text-align: justify;
+    margin: 40px;
+}
+
+.flipped .container1 {
+    display: none;
+}
+
+.flipped .container2 {
+    display: block;
+    
+}
+
+
+.container1, .container2 {
+    transition: transform 0.5s ease;
+    backface-visibility: hidden;
+
+}
+
+
+.flipped .donation-form {
+    transform: rotateY(180deg); 
+
+}
+
+.container2 {
+    transform: scaleX(-1);
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.payment-icons img {
+    margin-left: 10px; 
+}
+
